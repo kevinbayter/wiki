@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Wiki para conocer más acerca de COBIT e ITIL</title>
+    <link rel="icon" href="/static/img/favicon.jpg" type="image/jpeg">
+</head>
+
+<body>
+    <header>
+        <h1>Wiki para conocer más acerca de COBIT e ITIL</h1>
+        <div id="user-actions">
+            {% if session['user_id'] %}
+            Bienvenido, {{ session['username'] }} |
+            <img src="{{ url_for('static', filename='uploads/' + session['profile_picture']) }}"
+                alt="{{ session['username'] }}" width="50" height="50"> |
+            <a href="/logout">Cerrar sesión</a>
+            {% else %}
+            <a href="/register">Registrarse</a> | <a href="/login">Iniciar sesión</a>
+            {% endif %}
+        </div>
+    </header>
+    <nav>
+        <a href="#introduction">Introducción</a>
+        <a href="#cobit-section">COBIT</a>
+        <a href="#itil-section">ITIL</a>
+        <a href="#references">Referencias</a>
+        <a href="#comments-section">Comentarios</a>
+    </nav>
+    <section id="introduction">
+        <section id="learning-objective">
+            <h2>Objetivo de Aprendizaje</h2>
+            <p>La era digital ha impulsado la necesidad de establecer marcos de trabajo robustos que garanticen la
+                optimización y seguridad de los recursos de Tecnologías de la Información (TI). En este contexto, COBIT
+                e ITIL emergen como pioneros en la gestión y dirección de TI.</p>
+
+            <p>Con este propósito, el objetivo principal de esta Wiki es:</p>
+            <ul>
+                <li><strong>Profundizar en la Comprehensión:</strong> Entender a fondo los múltiples componentes que
+                    forman parte integral de los marcos de trabajo de COBIT e ITIL. No se trata solo de saber qué son,
+                    sino de comprender su estructura, funcionamiento y propósito en el ámbito de TI.</li>
+                <li><strong>Aplicación Práctica:</strong> Conocer cómo las organizaciones pueden beneficiarse al
+                    implementar COBIT e ITIL en sus operaciones diarias, y cómo estos marcos pueden ayudar en la toma de
+                    decisiones y en la alineación de TI con los objetivos del negocio.</li>
+                <li><strong>Preparación para Certificaciones:</strong> Ofrecer a los interesados recursos y simulacros
+                    que les permitan prepararse adecuadamente para obtener certificaciones en COBIT e ITIL. Estas
+                    certificaciones son un testimonio de la competencia y el conocimiento en estas áreas.</li>
+                <li><strong>Promoción de la Discusión y el Aprendizaje Colaborativo:</strong> A través de la sección de
+                    comentarios, los visitantes pueden compartir sus experiencias, conocimientos y preguntas,
+                    promoviendo un ambiente de aprendizaje colaborativo y continuo.</li>
+            </ul>
+
+            <p>Al finalizar el recorrido por esta Wiki, el usuario no solo deberá haber adquirido conocimientos teóricos
+                sobre COBIT e ITIL, sino que también deberá ser capaz de visualizar y argumentar su aplicabilidad en
+                escenarios reales del mundo TI.</p>
+        </section>
+
+    </section>
+    <section id="cobit-info">
+        <h2>COBIT (Control Objectives for Information and Related Technologies)</h2>
+        <p>COBIT es un marco de trabajo desarrollado por ISACA para la gestión y gobernanza de las tecnologías de la
+            información (TI). Su objetivo principal es alinear las estrategias de TI con las metas del negocio,
+            garantizando al mismo tiempo la integridad y el control de la información.</p>
+
+        <h3>Principales Componentes de COBIT:</h3>
+        <ul>
+            <li><strong>Framework:</strong> Proporciona una visión general y la organización de los objetivos de
+                control, proporcionando un marco de referencia estructurado.</li>
+            <li><strong>Procesos:</strong> Define un conjunto de procesos recomendados con entradas, salidas, objetivos,
+                prácticas y actividades.</li>
+            <li><strong>Métricas de Rendimiento:</strong> Ayuda en la evaluación de los procesos de TI y la
+                infraestructura.</li>
+            <li><strong>Modelos de Madurez:</strong> Ayuda a las organizaciones a medir su nivel de capacidad y madurez
+                en diferentes procesos.</li>
+        </ul>
+
+        <h3>Beneficios de COBIT:</h3>
+        <ul>
+            <li>Proporciona una visión clara de las responsabilidades de negocio y TI.</li>
+            <li>Mejora la alineación de TI con los objetivos organizacionales.</li>
+            <li>Optimiza los costos de TI y garantiza la entrega de servicios de TI de alta calidad.</li>
+            <li>Ayuda a las organizaciones a cumplir con las regulaciones y estándares.</li>
+            <li>Establece un lenguaje común para el negocio y TI.</li>
+        </ul>
+
+        <h3>Aplicación en el Mundo Real:</h3>
+        <p>COBIT ha ganado un amplio reconocimiento en la industria global debido a su capacidad para abordar desafíos
+            complejos que enfrentan las organizaciones en la gestión de TI. A continuación, se destacan algunas de sus
+            aplicaciones prácticas:</p>
+
+        <ul>
+            <li><strong>Transformación Digital:</strong> En la era de la digitalización, las organizaciones están
+                adoptando COBIT para garantizar que sus inversiones en TI generen valor y apoyen efectivamente las
+                estrategias del negocio.</li>
+
+            <li><strong>Seguridad y Cumplimiento:</strong> COBIT ofrece herramientas para evaluar y mejorar la seguridad
+                de la información. Las organizaciones lo utilizan para asegurarse de cumplir con regulaciones como GDPR,
+                HIPAA, entre otras.</li>
+
+            <li><strong>Gestión de Riesgos:</strong> COBIT proporciona un marco estructurado para identificar, evaluar y
+                gestionar los riesgos de TI, asegurando que las decisiones estén alineadas con los apetitos y
+                tolerancias al riesgo del negocio.</li>
+
+            <li><strong>Optimización de Costos:</strong> Al adoptar COBIT, las organizaciones pueden identificar
+                ineficiencias en sus procesos de TI y realizar ajustes que resulten en ahorros significativos.</li>
+
+            <li><strong>Comunicación y Colaboración:</strong> Al establecer un lenguaje común entre TI y el negocio,
+                COBIT facilita una comunicación más efectiva y colaborativa, rompiendo los silos y fomentando la
+                alineación entre departamentos.</li>
+        </ul>
+
+        <p>Además, numerosas empresas globales, desde startups tecnológicas hasta corporaciones multinacionales, han
+            implementado COBIT para estandarizar y armonizar sus procesos de TI a través de diferentes geografías y
+            unidades de negocio. Su adaptabilidad y enfoque en la entrega de valor al negocio continúan haciendo de
+            COBIT una elección preferida para la gestión y gobernanza de TI en el mundo real.</p>
+    </section>
+    <section id="itil-section">
+        <h2>ITIL (Information Technology Infrastructure Library)</h2>
+
+<p>ITIL es un conjunto de prácticas para la gestión de servicios de TI (ITSM) que se centra en alinear los servicios de TI con las necesidades de negocio. Originado en el Reino Unido en la década de 1980, ITIL ha evolucionado a lo largo de los años y se ha convertido en el enfoque estándar para la gestión de servicios de TI en todo el mundo.</p>
+
+<h3>Componentes clave de ITIL:</h3>
+<ul>
+    <li><strong>Service Strategy (Estrategia del Servicio):</strong> Ayuda a las organizaciones a definir y priorizar requisitos y áreas de inversión para los servicios.</li>
+    <li><strong>Service Design (Diseño del Servicio):</strong> Se centra en la creación o modificación de servicios para satisfacer los objetivos del negocio.</li>
+    <li><strong>Service Transition (Transición del Servicio):</strong> Asegura que los nuevos o modificados servicios cumplan con los requisitos del negocio y los usuarios.</li>
+    <li><strong>Service Operation (Operación del Servicio):</strong> Gestiona los servicios en operación para garantizar su eficiencia y eficacia.</li>
+    <li><strong>Continual Service Improvement (Mejora Continua del Servicio):</strong> Evalúa y mejora los servicios y prácticas de ITSM de manera regular.</li>
+</ul>
+
+<h3>Beneficios de ITIL:</h3>
+<ul>
+    <li>Mejora la alineación entre TI y el negocio.</li>
+    <li>Incrementa la eficiencia en la entrega de servicios.</li>
+    <li>Reduce costos al optimizar recursos y procesos.</li>
+    <li>Mejora la satisfacción del cliente y la percepción del servicio.</li>
+    <li>Ofrece un marco probado para la gestión de servicios de TI.</li>
+</ul>
+
+<h3>Aplicación en el Mundo Real:</h3>
+<p>ITIL ha sido adoptado por organizaciones de todos los tamaños y sectores, desde pequeñas empresas hasta corporaciones multinacionales y organismos gubernamentales. Algunas aplicaciones prácticas incluyen:</p>
+<ul>
+    <li><strong>Gestión de Incidentes:</strong> ITIL proporciona un proceso estructurado para identificar, registrar y resolver incidentes para minimizar el impacto en el negocio.</li>
+    <li><strong>Gestión de Cambios:</strong> Ayuda a las organizaciones a implementar cambios en la infraestructura de TI de manera controlada y eficiente.</li>
+    <li><strong>Gestión de la Capacidad:</strong> Asegura que la infraestructura de TI tenga la capacidad adecuada para satisfacer las demandas del negocio.</li>
+    <li><strong>Gestión de la Continuidad del Servicio:</strong> Ayuda a las organizaciones a planificar y recuperarse de desastres para asegurar la continuidad del negocio.</li>
+</ul>
+<p>ITIL proporciona un marco robusto y adaptable que ayuda a las organizaciones a gestionar sus servicios de TI de manera eficiente, alineando constantemente la TI con las necesidades cambiantes del negocio.</p>
+    </section>
+    <section id="references">
+        <h2>Referencias y Simulacros</h2>
+        <p>Para aquellos interesados en profundizar en COBIT e ITIL o en obtener certificaciones, aquí se presentan
+            algunas referencias y sitios donde se pueden realizar simulacros de preparación para las certificaciones:
+        </p>
+        <ul>
+            <li><a href="https://www.axelos.com/best-practice-solutions/itil" target="_blank">AXELOS: ITIL® Best Practice</a> - El sitio oficial de AXELOS, la organización detrás de ITIL.</li>
+            <li><a href="https://www.isaca.org/credentialing/cobit" target="_blank">ISACA: COBIT</a> - Sitio oficial de ISACA, la organización detrás de COBIT.</li>
+            <li><a href="https://www.itcolombia.com/itil/" target="_blank">Sitio Oficial de ITIL Colombia</a> - Proporciona recursos y guías relacionadas con ITIL.</li>
+            <li><a href="https://www.daypo.com/simulador-itil-v4-1-1.html" target="_blank">Simulador ITIL v4</a> - Ofrece simulacros sobre ITIL.</li>
+            <li><a href="https://www.globalknowledge.com/us-en/course/176306/itil-4-foundation/#gref" target="_blank">Global Knowledge ITIL</a> - Proporciona cursos de certificación ITIL.</li>
+            <li><a href="https://cobitonline.isaca.org/" target="_blank">COBIT Online de ISACA</a> - Plataforma online con guías y herramientas relacionadas con COBIT.</li>
+            <li><a href="https://www.servicetonic.com/es/itil/introduccion-a-itil-v3/" target="_blank">ThinkTIC - ITIL v3</a> - Artículo detallado sobre ITIL v3 en español.</li>
+        </ul>
+    </section>
+    <section id="comments-section">
+        <h2>Comentarios</h2>
+        <textarea id="comment-input" placeholder="Escribe tu comentario..."></textarea>
+        <button onclick="addComment()">Enviar comentario</button>
+        <div class="comments-container">
+            {% for comment_id, comment, username, profile_picture in comments %}
+            <div class="comment-item" data-comment-id="{{ comment_id }}">
+                <img src="{{ url_for('static', filename='uploads/' + profile_picture) }}" alt="{{ username }}"
+                    width="40" height="40">
+                <div class="comment-content">
+                    <div class="comment-author">{{ username }}</div>
+                    {{ comment }}
+                    <button onclick="showReplyBox({{ comment_id }})">Responder</button>
+                    <div class="comment-reply-box" id="reply-box-{{ comment_id }}" style="display: none;">
+                        <textarea id="reply-input-{{ comment_id }}" placeholder="Escribe tu respuesta..."></textarea>
+                        <button onclick="addComment({{ comment_id }})">Enviar respuesta</button>
+                        <button onclick="hideReplyBox({{ comment_id }})">Cancelar</button>
+                    </div>
+                    <div class="comment-reply"></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Kevin Bayter. Todos los derechos reservados.</p>
+    </footer>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

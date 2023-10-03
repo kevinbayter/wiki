@@ -1,0 +1,138 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav {
+    background-color: #444;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#comments-section {
+    margin-top: 40px;
+}
+
+#comment-input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+button, input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+#user-actions {
+    text-align: right;
+    margin: 10px;
+}
+
+#user-actions a {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #555;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+#user-actions a:hover {
+    background-color: #666;
+}
+
+.comments-container {
+    padding: 30px;
+    background-color: #fafafa;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.comment-item {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: start;
+}
+
+.comment-content {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-left: 20px;
+    flex-grow: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.comment-author {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comment-reply {
+    margin-left: 60px;
+}
+
+/* Estilo para las imágenes de perfil */
+#user-actions img, .comment-item img {
+    border-radius: 50%;
+}
